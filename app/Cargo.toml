@@ -1,0 +1,14 @@
+[package]
+name = "animal-rogue-app"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+sails-rs = "0.6.1"
+parity-scale-codec = { version = "3.6", default-features = false }
+scale-info = { version = "2.10", default-features = false }
+gstd = "=1.6.2"
+log = "*"
+vft-service = { git = "https://github.com/gear-foundation/standards" }
+vmt-service = { git = "https://github.com/gear-foundation/standards" }
+schnorrkel = { version = "0.10", default-features = false, features = ["u64_backend"] }

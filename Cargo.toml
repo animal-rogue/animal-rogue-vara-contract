@@ -1,0 +1,32 @@
+[workspace]
+
+members = ["client"]
+
+
+[package]
+name = "animal-rogue"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+animal-rogue-app = { path = "app" }
+
+[build-dependencies]
+animal-rogue-app = { path = "app" }
+sails-rs = { version = "0.6.1", features = ["wasm-builder"] }
+sails-idl-gen = "0.6.1"
+
+[dev-dependencies]
+animal-rogue = { path = ".", features = ["wasm-binary"] }
+animal-rogue-client = { path = "client" }
+sails-rs = { version = "0.6.1", features = ["gtest"] }
+tokio = { version = "1.40", features = ["rt", "macros"] }
+vft-service = { git = "https://github.com/gear-foundation/standards" }
+vmt-service = { git = "https://github.com/gear-foundation/standards" }
+parity-scale-codec = { version = "3.6", default-features = false }
+scale-info = { version = "2.10", default-features = false }
+schnorrkel = { version = "0.10", default-features = false, features = ["u64_backend", "getrandom"] }
+rand_core = "0.6.4"
+rand = { version = "0.8", default-features = false }
+[features]
+wasm-binary = []
